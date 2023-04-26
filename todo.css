@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(img/black-370118_1280.png);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+header h1 i{
+    margin-right: 15px;
+}
+header, 
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, 
+form button {
+    padding: 8px;
+    padding-left: 16px;
+    font-size: 23px;
+    border: none;
+    background: white;
+    border-radius: 28px;
+}
+form input::placeholder{
+    color: rgba(0, 0, 0, 0.521);
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+form button {
+    color: rgb(231, 128, 235);
+    background: white;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    margin-left: 8px;
+}
+
+form button:hover {
+    color: white;
+    background: rgb(231, 128, 235);
+}
+
+.fa-plus-circle {
+    margin-top: 5px;
+    margin-left: -8px;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 40%;
+    list-style: none;
+}
+
+.todo {
+    margin: 8px;
+    padding-left: 7px;
+    background: white;
+    color: black;
+    font-size: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 30px;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, 
+.complete-btn {
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.complete-btn {
+    background: rgb(231, 128, 235);
+}
+
+.trash-btn{
+    border-top-right-radius: 27px;
+    border-bottom-right-radius: 27px;
+    background: rgb(196, 99, 99);
+}
+
+/*.todo-item {
+    padding: 0 5px;
+} */
+
+.fa-trash, 
+.fa-check-circle {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.3;
+}
+
+.slide {
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+select {
+    color:rgb(231, 128, 235);
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.select::after {
+    content: "\25BC"; 
+    position: absolute;
+    background:rgb(231, 128, 235);
+    top: 0;
+    right: 0;
+    padding: 15px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: rgb(231, 128, 235);
+}
